@@ -55,5 +55,6 @@
     "zenMode.hideTabs": false,
     "zenMode.restore": true,
     "workbench.list.openMode": "singleClick",
-    "window.title": "${dirty}${activeEditorShort} | ${rootName}"
+    "window.title": "${dirty}${activeEditorShort} | ${rootName}",
+    "git.ignoreLimitWarning": true
 }
