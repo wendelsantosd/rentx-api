@@ -30,6 +30,7 @@ class ImportCategoryUseCase {
                     })
                 })
                 .on('end', async () => {
+                    fs.promises.unlink(file.path)
                     resolve(categories)
                 })
                 .on('error', err => {
