@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express'
+import express, { Request, Response } from 'express'
 import 'express-async-errors'
 import swaggerUi from 'swagger-ui-express'
 
@@ -21,7 +21,7 @@ app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.use(router)
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response) => {
     if (err instanceof AppError) {
         return res.status(err.statusCode).json({
             message: err.message,
