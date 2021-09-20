@@ -56,5 +56,6 @@
     "zenMode.restore": true,
     "workbench.list.openMode": "singleClick",
     "window.title": "${dirty}${activeEditorShort} | ${rootName}",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "explorer.compactFolders": false
 }
