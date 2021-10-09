@@ -76,6 +76,7 @@
             {
                 "devDependencies": [
                     "**/*.spec.ts",
+                    "**/*.ts",
                     true
                 ],
                 "optionalDependencies": false,

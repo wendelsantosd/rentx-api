@@ -1,5 +1,5 @@
-import { v4 as uuidV4} from 'uuid'
 import { hash } from 'bcrypt'
+import { v4 as uuidV4 } from 'uuid'
 
 import createConnection from '../index'
 
