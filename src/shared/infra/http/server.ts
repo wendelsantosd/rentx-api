@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import 'express-async-errors'
 import swaggerUi from 'swagger-ui-express'
 
-import '@shared/infra/typeorm'
+import crateConnection from '@shared/infra/typeorm'
 
 import '@shared/container'
 
@@ -10,10 +10,10 @@ import { AppError } from '@shared/errors/AppError'
 
 import { router } from './routes'
 import swaggerFile from '../../../swagger.json'
+import { createConnection } from 'typeorm'
 
+createConnection()
 const app = express()
-
-console.clear()
 
 app.use(express.json())
 
