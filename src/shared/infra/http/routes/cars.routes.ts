@@ -1,10 +1,12 @@
 import { CreateCarController } from '@modules/cars/CreateCar/createCarController'
 import { Router } from 'express'
+import { ensureAdmin } from '../middlewares/ensureAdmin'
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated'
 
 const carsRoutes = Router()
 
 const createCarController = new CreateCarController()
 
-carsRoutes.post('/', createCarController.handle)
+carsRoutes.post('/', ensureAuthenticated, createCarController.handle)
 
 export { carsRoutes }
